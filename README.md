@@ -5,7 +5,7 @@
 <h1 align="center"> Monitoreo Web de Servidores </h1> <br>
 
 <p align="center">
-  Envío de alerta en tiempo real sobre la conexión del servidor.
+  Sistema web para monitorear en tiempo real la conexión con servidores.
 </p>
 
 ## Tabla de contenidos
@@ -21,18 +21,19 @@
 
 ## Introducción
 
-Servicio de alerta de monitoreo de servidores y antenas de energía eléctrica UISP. El sistema está desarrollado en Python, se ejecuta en tiempo real sobre un servidor Linux, envía alertas sobre el estado de conexión del servidor, a través de WhatsApp.
+Portal web multiusuarios para monitorear servidores a través de una conexión vía ping, el portal muestra una tabla con es estado de cada servidor, permitiendo editar o eliminar cada servidor. A su vez, el sistema envía un mensaje por WhatsApp al usuario cuando un servidor pierde conexión.
 
-**Dispinible para WhatsApp, Telegram o Messenger.**
+**Dispinible para Web, WhatsApp, Telegram o Messenger.**
 
 <p align="center">
-  <img src = "https://raw.githubusercontent.com/edwin06111998/monitoreo_servidores_alerta/main/images/Captura.png" width=700>
+  <img src = "https://github.com/edwin06111998/Imagenes/blob/main/Proceso%20Chatbot/Monitoreo.png" width=1000>
 </p>
 
 ## Funciones
 
 Estas son algunas de las características del sistema de monitoreo:
 
+* Permitir editar o eliminar el servidor.
 * Verificar el estado de conexión de servidores.
 * Verificar el estado de conexión de antenas UISP.
 * Notificar en tiempo real mediante WhatsApp sobre caída de servidor/antena.
@@ -59,18 +60,18 @@ Siéntete libre de comentarme tu experiencia utilizando este sistema, puedes esc
 
 Este proyecto ha sido desarrollado únicamente por mí (Edwin Veloz).
 
-## Proceso de construcción
+## Herramientas utilizadas
 
-- Clona o descarga el repositorio
-- Crea una aplicación en Facebook para usar la API de WhatsApp
-- Obtén un token permanente y el ID de la aplicación
-- Crea las plantillas en Facebook para los mensajes de alerta
-- Ingresa el token y ID en el archivo send_message.py
-- Modifica el "filepath" ingresando la ruta del repositorio en los archivos ping.py y antennas.py
-- Ingresa las IPs en el archivo ips.txt y los destinatarios en el archivo numbers.txt
-- Ejecuta ping.py y antennas.py
+- React JS
+- NodeJS
+- Python
+- MySQL
+- JavaScript, Bootstrap, HTML
+- WhatsApp Bussiness API
 
-Importante: para ejecutar el código 24/7, puedes implementarlo en un servidor Linux y usar comandos como "crontab -e" para ejecutar el código cada determinado tiempo.
+Importante: necesitas tener acceso a la API oficial de WhatsApp para poder enviar la alerta.
+
+*Actualmente me encuentro desarrollando la funcionalidad de panel multiusuario, para que cada usuario tenga sus respectivos servidores.
 
 ## Contacto
 

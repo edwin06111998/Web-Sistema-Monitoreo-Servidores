@@ -1,0 +1,109 @@
+/* Popup style */
+.popup-box-delete {
+    position: fixed;
+    background-color:rgba(255,255,255,0.5);
+    width: 100%;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    text-align: center;
+    opacity: 50%;
+  }
+
+  .popup-box-update {
+    position: fixed;
+    background: #00000050;
+    opacity: 20%;
+    width: 100%;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    text-align: center;
+  }
+   
+  .box-update{
+    position: relative;
+    width: 35%;
+    margin: 0 auto;
+    height: auto;
+    max-height: 70vh;
+    margin-top: calc(120vh - 85vh - 20px);
+    background: #ffffff;
+    border-radius: 15px / 15px;
+    padding: 20px;
+    border: 1px solid #ffffff;
+    overflow: auto;
+    padding-top: 1em;
+  }
+
+  .box-delete {
+    position: relative;
+    width: 25%;
+    margin: 0 auto;
+    height: auto;
+    max-height: 70vh;
+    margin-top: calc(120vh - 85vh - 20px);
+    background: #ffffff;
+    border-radius: 15px / 15px;
+    padding: 20px;
+    border: 1px solid #ffffff;
+    overflow: auto;
+    padding-top: 1em;
+  }
+
+  .title-popup {
+    font-weight: bold;
+    font-size: 1.5em;
+    color: rgba(89, 89, 89, 255);
+  }
+
+  .subtitle-popup {
+    font-size: medium;
+    font-weight: normal;
+    color: rgba(89, 89, 89, 255);
+    margin-top: 1em;
+    padding-left: 1.5em;
+    padding-right: 1.5em;
+  }
+
+  .div-popup {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+  }
+   
+  .div-buttons-delete {
+    margin-top: 0.7em;
+    display: flex;
+    justify-content: space-between;
+    padding-left: 1.6em;
+    padding-right: 1.6em;
+  }
+
+  .button-cancelar-popup{
+    border-color: rgb(165, 165, 165);
+    background-color: white;
+    color: rgb(94, 94, 94);
+    width: 45%;
+  }
+
+  .button-cancelar-popup:hover{
+    border-color: rgb(165, 165, 165);
+    background-color: white;
+    color: rgb(65, 65, 65);
+    width: 45%;
+  }
+
+  .button-eliminar-popup{
+    border-color: #DD2E35;
+    background-color: #DD2E35;
+    color: white;
+    width: 45%;
+  }
+
+  .button-eliminar-popup:hover{
+    border-color: #DD2E35;
+    background-color: #DD2E35;
+    color: white;
+    width: 45%;
+  }

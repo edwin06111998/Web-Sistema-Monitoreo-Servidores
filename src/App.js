@@ -18,6 +18,7 @@ function App() {
   const [isOpenU, setIsOpenU] = useState(false);
   const [users, setUsers] = useState([])
   const [idNodo, setIdNodo] = useState([])
+  const [ip_nodo, setIpNodo] = useState([])
   const [listUpdated, setListUpdated] = useState(false)
   const [busqueda, setBusqueda] = useState("");
 
@@ -39,7 +40,7 @@ function App() {
         <NavBar brand='Maxitel' />
         <Subtitle principal='Monitoreo de IP’s' secondary='Sistema de alarma Maxitel mediante la API de WhatsApp ' setUsers={setUsers} users={users} busqueda={busqueda} setBusqueda={setBusqueda} />
         <div className='container-table'>
-          <UserList user={user} setUser={setUser} users={users} setListUpdated={setListUpdated} isOpenD={isOpenD} setIsOpenD={setIsOpenD} isOpenU={isOpenU} setIsOpenU={setIsOpenU} idNodo={idNodo} setIdNodo={setIdNodo} />
+          <UserList user={user} setUser={setUser} users={users} setListUpdated={setListUpdated} isOpenD={isOpenD} setIsOpenD={setIsOpenD} isOpenU={isOpenU} setIsOpenU={setIsOpenU} idNodo={idNodo} setIdNodo={setIdNodo} ip_nodo={ip_nodo} setIpNodo={setIpNodo} />
         </div>
         <Footer />
       </Fragment>

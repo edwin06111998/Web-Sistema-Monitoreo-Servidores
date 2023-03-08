@@ -4,9 +4,9 @@ import Update from './Update';
 import '../styles/table_nodes.css'
 import '../styles/popup.css'
 
-const UserList = ({ user, setUser, users, setListUpdated, isOpenD, setIsOpenD, isOpenU, setIsOpenU, idNodo, setIdNodo }) => {
+const UserList = ({ user, setUser, users, setListUpdated, isOpenD, setIsOpenD, isOpenU, setIsOpenU, idNodo, setIdNodo, ip_nodo, setIpNodo }) => {
 
-    let { nombreNodo, ipNodo } = user
+    let { nombreNodo, ipNodo, estadoNodo, registroNodo } = user
 
     const togglePopupD = () => {
         setIsOpenD(!isOpenD);
@@ -19,6 +19,11 @@ const UserList = ({ user, setUser, users, setListUpdated, isOpenD, setIsOpenD, i
     const setearID = (id) => {
         console.log("ID a configurar: " + id)
         setIdNodo(id);
+    }
+
+    const setearIP = (ipNodo) => {
+        console.log("IP a configurar: " + ipNodo)
+        setIpNodo(ipNodo);
     }
 
     const handleDelete = (id) => {
@@ -58,7 +63,9 @@ const UserList = ({ user, setUser, users, setListUpdated, isOpenD, setIsOpenD, i
         // Reset User State
         setUser({
             nombreNodo: '',
-            ipNodo: ''
+            ipNodo: '',
+            estadoNodo: '',
+            registroNodo: ''
         })
 
         setListUpdated(true)
@@ -107,18 +114,18 @@ const UserList = ({ user, setUser, users, setListUpdated, isOpenD, setIsOpenD, i
                         <td className='th-direccion-ip'>{user.ipNodo}</td>
                         <td className='td-estado'>
                             <div className='div-estado'>
-                                En línea
+                                {user.estadoNodo}
                             </div>
                         </td>
-                        <td className='th-ultimo-registro'>06/11/1998 - 15:04</td>
+                        <td className='th-ultimo-registro'>{user.registroNodo}</td>
                         <td className='td-acciones'>
                             <div className='div-acciones'>
                                 <h3 type="button" onClick={function (event) { togglePopupU(); setearID(user.idNodo) }} className="texto-acciones-editar" title="Editar nodo">Editar</h3>
                                 {isOpenU ?
-                                    <Update nombreNodo = {nombreNodo} ipNodo = {ipNodo} id_nodo={idNodo} togglePopupU={togglePopupU} handleUpdate={handleUpdate} handleSubmit={handleSubmit} handleChange = {handleChange} /> : null}
-                                <h3 type="button" onClick={function (event) { togglePopupD(); setearID(user.idNodo) }} className="texto-acciones-eliminar" title="Eliminar nodo">Eliminar</h3>
+                                    <Update nombreNodo={nombreNodo} ipNodo={ipNodo} estadoNodo={estadoNodo} registroNodo={registroNodo} id_nodo={idNodo} togglePopupU={togglePopupU} handleUpdate={handleUpdate} handleSubmit={handleSubmit} handleChange={handleChange} /> : null}
+                                <h3 type="button" onClick={function (event) { togglePopupD(); setearID(user.idNodo); setearIP(user.ipNodo) }} className="texto-acciones-eliminar" title="Eliminar nodo">Eliminar</h3>
                                 {isOpenD ?
-                                    <Delete id_nodo={idNodo} togglePopupD={togglePopupD} handleDelete={handleDelete} /> : null}                                    
+                                    <Delete ip_nodo={ip_nodo} id_nodo={idNodo} togglePopupD={togglePopupD} handleDelete={handleDelete} /> : null}
                             </div>
                         </td>
                     </tr>
